@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Symbols & Nickname Generator – Copy Paste</title>
+
+<meta name="description"
+content="Copy and paste special symbols, Unicode characters, hearts, stars, arrows, math symbols, currency symbols and generate stylish nicknames for gaming and social media.">
+
+<meta name="keywords"
+content="symbols copy paste, special symbols, Unicode symbols, nickname generator, stylish nickname generator, gaming nickname, Free Fire nickname, Instagram nickname, YouTube nickname, heart symbols, star symbols, arrow symbols">
+
+<meta name="robots" content="index,follow">
+
+<meta property="og:title"
+content="Symbols & Nickname Generator">
+
+<meta property="og:description"
+content="Find symbols and create stylish nicknames. Copy them with one click.">
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#0f1117;
+    color:#fff;
+}
+
+/* HEADER */
+
+header{
+    background:linear-gradient(135deg,#5865f2,#7c3aed);
+    padding:45px 20px;
+    text-align:center;
+}
+
+header h1{
+    margin:0 0 12px;
+    font-size:42px;
+}
+
+header p{
+    max-width:750px;
+    margin:0 auto 25px;
+    line-height:1.6;
+}
+
+/* SEARCH */
+
+.search-box{
+    max-width:700px;
+    margin:auto;
+    display:flex;
+    gap:8px;
+}
+
+.search-box input{
+    flex:1;
+    padding:15px;
+    border:0;
+    border-radius:10px;
+    font-size:16px;
+    outline:none;
+}
+
+.search-box button{
+    padding:0 22px;
+    border:0;
+    border-radius:10px;
+    background:#111827;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+/* CONTAINER */
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:25px 15px;
+}
+
+/* CATEGORY */
+
+.categories{
+    display:flex;
+    gap:8px;
+    overflow:auto;
+    padding:5px 0 20px;
+}
+
+.categories button{
+    white-space:nowrap;
+    padding:10px 15px;
+    border:0;
+    border-radius:20px;
+    background:#242936;
+    color:white;
+    cursor:pointer;
+}
+
+.categories button.active{
+    background:#5865f2;
+}
+
+/* SECTION */
+
+.section{
+    background:#191d27;
+    padding:20px;
+    border-radius:18px;
+    margin-bottom:25px;
+}
+
+.section h2{
+    margin-top:0;
+}
+
+/* GRID */
+
+.symbol-grid{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fill,minmax(120px,1fr));
+    gap:10px;
+}
+
+/* CARD */
+
+.symbol-card{
+    background:#242936;
+    border:1px solid #343a49;
+    border-radius:12px;
+    padding:14px 8px;
+    text-align:center;
+    transition:.2s;
+}
+
+.symbol-card:hover{
+    transform:translateY(-3px);
+    border-color:#5865f2;
+}
+
+.symbol{
+    font-size:30px;
+    min-height:42px;
+    word-break:break-word;
+}
+
+.name{
+    color:#aaa;
+    font-size:12px;
+    margin:5px 0 10px;
+}
+
+.copy-btn{
+    border:0;
+    border-radius:7px;
+    padding:7px 12px;
+    background:#5865f2;
+    color:white;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.copy-btn.copied{
+    background:#16a34a;
+}
+
+/* INFO */
+
+.info{
+    line-height:1.7;
+    color:#ddd;
+}
+
+/* FAQ */
+
+.faq{
+    border-top:1px solid #343a49;
+    padding:15px 0;
+}
+
+.faq h3{
+    margin:0 0 8px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#080a0f;
+    text-align:center;
+    padding:30px 15px;
+    color:#aaa;
+}
+
+/* HIDDEN */
+
+.hidden{
+    display:none;
+}
+
+.no-result{
+    text-align:center;
+    padding:30px;
+    color:#aaa;
+}
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+    header h1{
+        font-size:30px;
+    }
+
+    header p{
+        font-size:15px;
+    }
+
+    .search-box{
+        flex-direction:column;
+    }
+
+    .search-box button{
+        padding:13px;
+    }
+
+    .symbol-grid{
+        grid-template-columns:
+        repeat(auto-fill,minmax(90px,1fr));
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header>
+
+<h1>✨ Symbols & Nickname Generator</h1>
+
+<p>
+Find special symbols, Unicode characters and
+create stylish nicknames for gaming,
+Instagram, YouTube and social media.
+</p>
+
+<div class="search-box">
+
+<input
+id="mainSearch"
+type="search"
+placeholder="Search symbols... heart, star, arrow"
+autocomplete="off"
+>
+
+<button onclick="searchSymbols()">
+Search
+</button>
+
+</div>
+
+</header>
+
+
+
+<main class="container">
+
+
+<!-- =====================================================
+     NICKNAME GENERATOR
+===================================================== -->
+
+<section class="section">
+
+<h2>🔥 Stylish Nickname Generator</h2>
+
+<p class="info">
+Enter your name and create stylish nicknames
+for gaming, Free Fire, Minecraft, Instagram,
+YouTube and social media.
+</p>
+
+<div class="search-box">
+
+<input
+id="nicknameInput"
+type="text"
+placeholder="Enter your name..."
+maxlength="20"
+>
+
+<button onclick="generateNicknames()">
+Generate
+</button>
+
+</div>
+
+<div
+id="nicknameGrid"
+class="symbol-grid"
+style="margin-top:20px">
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CATEGORIES
+===================================================== -->
+
+<div class="categories">
+
+<button
+class="active"
+onclick="showCategory('all',this)">
+All
+</button>
+
+<button
+onclick="showCategory('popular',this)">
+Popular
+</button>
+
+<button
+onclick="showCategory('heart',this)">
+Hearts
+</button>
+
+<button
+onclick="showCategory('star',this)">
+Stars
+</button>
+
+<button
+onclick="showCategory('arrow',this)">
+Arrows
+</button>
+
+<button
+onclick="showCategory('math',this)">
+Math
+</button>
+
+<button
+onclick="showCategory('currency',this)">
+Currency
+</button>
+
+<button
+onclick="showCategory('check',this)">
+Check
+</button>
+
+<button
+onclick="showCategory('bracket',this)">
+Brackets
+</button>
+
+<button
+onclick="showCategory('music',this)">
+Music
+</button>
+
+</div>
+
+
+
+<!-- =====================================================
+     SYMBOLS
+===================================================== -->
+
+<section class="section">
+
+<h2>✨ Copy Symbols</h2>
+
+<div
+id="symbolGrid"
+class="symbol-grid">
+</div>
+
+<div
+id="noResult"
+class="no-result hidden">
+No symbols found.
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     QUICK SYMBOLS
+===================================================== -->
+
+<section class="section">
+
+<h2>⭐ Popular Special Symbols</h2>
+
+<p
+style="font-size:28px;line-height:2">
+
+♡ ♥ ❤ ❥ ❣ ❦ ❧
+
+★ ☆ ✦ ✧ ✪ ✯
+
+✓ ✔ ✕ ✖ ☑ ☐
+
+→ ← ↑ ↓ ↔ ⇒ ⇐
+
+∞ ≠ ≈ ≤ ≥ ± × ÷
+
+₹ $ € £ ¥ ₿
+
+© ® ™ ℗
+
+</p>
+
+</section>
+
+
+
+<!-- =====================================================
+     HOW TO USE
+===================================================== -->
+
+<section class="section">
+
+<h2>📋 How to Use</h2>
+
+<div class="info">
+
+<p>
+<b>1.</b> Search for your favorite symbol.
+</p>
+
+<p>
+<b>2.</b> Click the <b>Copy</b> button.
+</p>
+
+<p>
+<b>3.</b> Paste it into WhatsApp, Instagram,
+YouTube, Facebook, games or anywhere you want.
+</p>
+
+<p>
+For nicknames, enter your name in the
+Nickname Generator and click Generate.
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SEO CONTENT
+===================================================== -->
+
+<section class="section">
+
+<h2>🎮 Stylish Nicknames & Special Symbols</h2>
+
+<div class="info">
+
+<p>
+This website provides special symbols,
+Unicode characters and stylish nickname
+ideas that can be copied and pasted easily.
+</p>
+
+<p>
+You can create gaming names, social media
+nicknames, Instagram names, YouTube names
+and profile names using different symbols.
+</p>
+
+<p>
+Popular categories include heart symbols,
+star symbols, arrow symbols, mathematical
+symbols, currency symbols, check marks,
+brackets and music symbols.
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FAQ
+===================================================== -->
+
+<section class="section">
+
+<h2>❓ Frequently Asked Questions</h2>
+
+
+<div class="faq">
+
+<h3>
+What is a symbol copy and paste website?
+</h3>
+
+<p>
+It is a website where users can find
+Unicode and special characters and copy
+them for use in text, profiles, posts,
+messages and usernames.
+</p>
+
+</div>
+
+
+<div class="faq">
+
+<h3>
+How can I create a stylish nickname?
+</h3>
+
+<p>
+Enter your name in the Nickname Generator
+and click Generate. Different styles will
+be displayed with Copy buttons.
+</p>
+
+</div>
+
+
+<div class="faq">
+
+<h3>
+Can I use these symbols in gaming names?
+</h3>
+
+<p>
+Many games support Unicode characters,
+but the exact characters allowed depend
+on the individual game.
+</p>
+
+</div>
+
+
+<div class="faq">
+
+<h3>
+Can I use symbols on Instagram and YouTube?
+</h3>
+
+<p>
+Many Unicode characters can be copied into
+social media profiles, comments and posts,
+although platform restrictions can vary.
+</p>
+
+</div>
+
+
+<div class="faq">
+
+<h3>
+Are these symbols free to copy?
+</h3>
+
+<p>
+The website provides Unicode characters
+that users can copy and paste. Appearance
+can vary depending on the device and font.
+</p>
+
+</div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+<p>
+© 2026 Symbols & Nickname Generator
+</p>
+
+<p>
+Symbols • Nicknames • Unicode • Gaming Names
+</p>
+
+</footer>
+
+
+
+<script>
+
+
+/* =====================================================
+   SYMBOL DATABASE
+===================================================== */
+
+const symbols = [
+
+/* POPULAR */
+
+{c:"♥",n:"Heart",cat:"heart popular"},
+{c:"❤",n:"Red Heart",cat:"heart popular"},
+{c:"♡",n:"White Heart",cat:"heart popular"},
+{c:"★",n:"Star",cat:"star popular"},
+{c:"☆",n:"Star Outline",cat:"star popular"},
+{c:"✓",n:"Check",cat:"check popular"},
+{c:"✔",n:"Heavy Check",cat:"check popular"},
+{c:"✕",n:"Cross",cat:"check popular"},
+{c:"→",n:"Right Arrow",cat:"arrow popular"},
+{c:"←",n:"Left Arrow",cat:"arrow popular"},
+{c:"↑",n:"Up Arrow",cat:"arrow popular"},
+{c:"↓",n:"Down Arrow",cat:"arrow popular"},
+{c:"∞",n:"Infinity",cat:"math popular"},
+{c:"©",n:"Copyright",cat:"popular"},
+{c:"®",n:"Registered",cat:"popular"},
+{c:"™",n:"Trademark",cat:"popular"},
+
+/* HEART */
+
+{c:"♥",n:"Heart",cat:"heart"},
+{c:"♡",n:"White Heart",cat:"heart"},
+{c:"❤",n:"Heavy Heart",cat:"heart"},
+{c:"❥",n:"Heart Arrow",cat:"heart"},
+{c:"❣",n:"Heart Exclamation",cat:"heart"},
+{c:"❦",n:"Floral Heart",cat:"heart"},
+{c:"❧",n:"Heart Decoration",cat:"heart"},
+{c:"💕",n:"Two Hearts",cat:"heart"},
+{c:"💖",n:"Sparkling Heart",cat:"heart"},
+{c:"💗",n:"Growing Heart",cat:"heart"},
+{c:"💙",n:"Blue Heart",cat:"heart"},
+{c:"💚",n:"Green Heart",cat:"heart"},
+{c:"💛",n:"Yellow Heart",cat:"heart"},
+{c:"🧡",n:"Orange Heart",cat:"heart"},
+{c:"💜",n:"Purple Heart",cat:"heart"},
+{c:"🖤",n:"Black Heart",cat:"heart"},
+{c:"🤍",n:"White Heart",cat:"heart"},
+
+/* STARS */
+
+{c:"★",n:"Black Star",cat:"star"},
+{c:"☆",n:"White Star",cat:"star"},
+{c:"✦",n:"Four Point Star",cat:"star"},
+{c:"✧",n:"Star Outline",cat:"star"},
+{c:"✪",n:"Circled Star",cat:"star"},
+{c:"✯",n:"Outlined Star",cat:"star"},
+{c:"✰",n:"Shadowed Star",cat:"star"},
+{c:"✵",n:"Eight Point Star",cat:"star"},
+{c:"✶",n:"Six Point Star",cat:"star"},
+{c:"✷",n:"Eight Point Star",cat:"star"},
+{c:"✹",n:"Twelve Point Star",cat:"star"},
+
+/* ARROWS */
+
+{c:"→",n:"Right Arrow",cat:"arrow"},
+{c:"←",n:"Left Arrow",cat:"arrow"},
+{c:"↑",n:"Up Arrow",cat:"arrow"},
+{c:"↓",n:"Down Arrow",cat:"arrow"},
+{c:"↔",n:"Left Right Arrow",cat:"arrow"},
+{c:"↕",n:"Up Down Arrow",cat:"arrow"},
+{c:"⇒",n:"Double Right Arrow",cat:"arrow"},
+{c:"⇐",n:"Double Left Arrow",cat:"arrow"},
+{c:"⇑",n:"Double Up Arrow",cat:"arrow"},
+{c:"⇓",n:"Double Down Arrow",cat:"arrow"},
+{c:"➜",n:"Heavy Arrow",cat:"arrow"},
+{c:"➤",n:"Arrowhead",cat:"arrow"},
+{c:"➥",n:"Arrow Curve",cat:"arrow"},
+{c:"➳",n:"Fancy Arrow",cat:"arrow"},
+{c:"➵",n:"Long Arrow",cat:"arrow"},
+
+/* MATH */
+
+{c:"∞",n:"Infinity",cat:"math"},
+{c:"±",n:"Plus Minus",cat:"math"},
+{c:"×",n:"Multiplication",cat:"math"},
+{c:"÷",n:"Division",cat:"math"},
+{c:"≠",n:"Not Equal",cat:"math"},
+{c:"≈",n:"Approximately",cat:"math"},
+{c:"≤",n:"Less Equal",cat:"math"},
+{c:"≥",n:"Greater Equal",cat:"math"},
+{c:"√",n:"Square Root",cat:"math"},
+{c:"∑",n:"Summation",cat:"math"},
+{c:"∏",n:"Product",cat:"math"},
+{c:"∫",n:"Integral",cat:"math"},
+{c:"π",n:"Pi",cat:"math"},
+{c:"Δ",n:"Delta",cat:"math"},
+
+/* CURRENCY */
+
+{c:"₹",n:"Indian Rupee",cat:"currency"},
+{c:"$",n:"Dollar",cat:"currency"},
+{c:"€",n:"Euro",cat:"currency"},
+{c:"£",n:"Pound",cat:"currency"},
+{c:"¥",n:"Yen",cat:"currency"},
+{c:"₽",n:"Ruble",cat:"currency"},
+{c:"₩",n:"Won",cat:"currency"},
+{c:"₿",n:"Bitcoin",cat:"currency"},
+{c:"¢",n:"Cent",cat:"currency"},
+
+/* CHECK */
+
+{c:"✓",n:"Check Mark",cat:"check"},
+{c:"✔",n:"Heavy Check",cat:"check"},
+{c:"☑",n:"Checked Box",cat:"check"},
+{c:"☐",n:"Empty Box",cat:"check"},
+{c:"☒",n:"Crossed Box",cat:"check"},
+{c:"✕",n:"Cross Mark",cat:"check"},
+{c:"✖",n:"Heavy Cross",cat:"check"},
+
+/* BRACKETS */
+
+{c:"(",n:"Round Bracket",cat:"bracket"},
+{c:")",n:"Round Bracket",cat:"bracket"},
+{c:"[",n:"Square Bracket",cat:"bracket"},
+{c:"]",n:"Square Bracket",cat:"bracket"},
+{c:"{",n:"Curly Bracket",cat:"bracket"},
+{c:"}",n:"Curly Bracket",cat:"bracket"},
+{c:"⟨",n:"Angle Bracket",cat:"bracket"},
+{c:"⟩",n:"Angle Bracket",cat:"bracket"},
+{c:"【",n:"Black Bracket",cat:"bracket"},
+{c:"】",n:"Black Bracket",cat:"bracket"},
+
+/* MUSIC */
+
+{c:"♪",n:"Music Note",cat:"music"},
+{c:"♫",n:"Music Notes",cat:"music"},
+{c:"♩",n:"Quarter Note",cat:"music"},
+{c:"♬",n:"Music Notes",cat:"music"},
+{c:"♭",n:"Flat",cat:"music"},
+{c:"♯",n:"Sharp",cat:"music"},
+{c:"♮",n:"Natural",cat:"music"}
+
+];
+
+
+
+/* =====================================================
+   ELEMENTS
+===================================================== */
+
+const symbolGrid =
+document.getElementById("symbolGrid");
+
+const noResult =
+document.getElementById("noResult");
+
+const mainSearch =
+document.getElementById("mainSearch");
+
+let currentCategory =
+"all";
+
+
+
+/* =====================================================
+   HTML ESCAPE
+===================================================== */
+
+function escapeHTML(text){
+
+    return String(text)
+    .replace(/&/g,"&amp;")
+    .replace(/</g,"&lt;")
+    .replace(/>/g,"&gt;")
+    .replace(/"/g,"&quot;")
+    .replace(/'/g,"&#039;");
+
+}
+
+
+
+/* =====================================================
+   SYMBOL RENDER
+===================================================== */
+
+function renderSymbols(list){
+
+    symbolGrid.innerHTML="";
+
+    if(list.length===0){
+
+        noResult.classList.remove("hidden");
+
+        return;
+
+    }
+
+    noResult.classList.add("hidden");
+
+
+    list.forEach(item=>{
+
+        const card =
+        document.createElement("div");
+
+        card.className =
+        "symbol-card";
+
+
+        card.innerHTML = `
+
+            <div class="symbol">
+                ${escapeHTML(item.c)}
+            </div>
+
+            <div class="name">
+                ${escapeHTML(item.n)}
+            </div>
+
+            <button
+            class="copy-btn"
+            onclick="copyText(this,${JSON.stringify(item.c)})">
+                Copy
+            </button>
+
+        `;
+
+
+        symbolGrid.appendChild(card);
+
+    });
+
+}
+
+
+
+/* =====================================================
+   COPY
+===================================================== */
+
+function copyText(button,text){
+
+    navigator.clipboard
+    .writeText(text)
+    .then(()=>{
+
+        button.innerText =
+        "✓ Copied";
+
+        button.classList.add("copied");
+
+
+        setTimeout(()=>{
+
+            button.innerText =
+            "Copy";
+
+            button.classList.remove("copied");
+
+        },1200);
+
+    })
+
+    .catch(()=>{
+
+        const textarea =
+        document.createElement("textarea");
+
+        textarea.value=text;
+
+        document.body.appendChild(textarea);
+
+        textarea.select();
+
+        document.execCommand("copy");
+
+        textarea.remove();
+
+        button.innerText="✓ Copied";
+
+        setTimeout(()=>{
+
+            button.innerText="Copy";
+
+        },1200);
+
+    });
+
+}
+
+
+
+/* =====================================================
+   CATEGORY
+===================================================== */
+
+function showCategory(category,button){
+
+    currentCategory =
+    category;
+
+
+    document
+    .querySelectorAll(".categories button")
+    .forEach(btn=>
+        btn.classList.remove("active")
+    );
+
+
+    button.classList.add("active");
+
+    mainSearch.value="";
+
+    renderFiltered();
+
+}
+
+
+
+/* =====================================================
+   SEARCH
+===================================================== */
+
+function searchSymbols(){
+
+    renderFiltered();
+
+}
+
+
+function renderFiltered(){
+
+    const term =
+    mainSearch.value
+    .toLowerCase()
+    .trim();
+
+
+    const result =
+    symbols.filter(item=>{
+
+        const categoryMatch =
+        currentCategory==="all" ||
+        item.cat.includes(currentCategory);
+
+
+        const searchMatch =
+        !term ||
+        item.c.toLowerCase().includes(term) ||
+        item.n.toLowerCase().includes(term) ||
+        item.cat.toLowerCase().includes(term);
+
+
+        return categoryMatch &&
+        searchMatch;
+
+    });
+
+
+    renderSymbols(result);
+
+}
+
+
+mainSearch.addEventListener(
+"input",
+renderFiltered
+);
+
+
+
+/* =====================================================
+   NICKNAME GENERATOR
+===================================================== */
+
+function generateNicknames(){
+
+    const input =
+    document
+    .getElementById("nicknameInput")
+    .value
+    .trim();
+
+
+    const grid =
+    document
+    .getElementById("nicknameGrid");
+
+
+    if(!input){
+
+        grid.innerHTML = `
+        <div class="no-result">
+        Please enter your name.
+        </div>
+        `;
+
+        return;
+
+    }
+
+
+    const safeName =
+    escapeHTML(input);
+
+
+    const names = [
+
+        `꧁༺${safeName}༻꧂`,
+
+        `『${safeName}』`,
+
+        `乂${safeName}乂`,
+
+        `★彡${safeName}彡★`,
+
+        `亗 ${safeName} 亗`,
+
+        `么${safeName}么`,
+
+        `ツ ${safeName} ツ`,
+
+        `×͜× ${safeName}`,
+
+        `メ${safeName}メ`,
+
+        `〆${safeName}〆`,
+
+        `♛ ${safeName} ♛`,
+
+        `☠ ${safeName} ☠`,
+
+        `⚡${safeName}⚡`,
+
+        `𓆩${safeName}𓆪`,
+
+        `༒ ${safeName} ༒`,
+
+        `꧁${safeName}꧂`,
+
+        `亗${safeName}亗`,
+
+        `★${safeName}★`,
+
+        `『★』${safeName}『★』`,
+
+        `☯ ${safeName} ☯`,
+
+        `♚ ${safeName} ♚`,
+
+        `♕ ${safeName} ♕`,
+
+        `⚔ ${safeName} ⚔`,
+
+        `☬ ${safeName} ☬`
+
+    ];
+
+
+    grid.innerHTML="";
+
+
+    names.forEach(name=>{
+
+        const card =
+        document.createElement("div");
+
+        card.className =
+        "symbol-card";
+
+
+        card.dataset.nickname =
+        name;
+
+
+        card.innerHTML = `
+
+            <div
+            class="symbol"
+            style="
+            font-size:20px;
+            min-height:50px">
+                ${name}
+            </div>
+
+            <div class="name">
+                Stylish Nickname
+            </div>
+
+            <button
+            class="copy-btn"
+            onclick="copyNickname(this)">
+                Copy
+            </button>
+
+        `;
+
+
+        grid.appendChild(card);
+
+    });
+
+}
+
+
+
+/* =====================================================
+   COPY NICKNAME
+===================================================== */
+
+function copyNickname(button){
+
+    const card =
+    button.closest(".symbol-card");
+
+
+    const nickname =
+    card.dataset.nickname;
+
+
+    copyText(
+        button,
+        nickname
+    );
+
+}
+
+
+
+/* =====================================================
+   INITIAL LOAD
+===================================================== */
+
+renderSymbols(symbols);
+
+</script>
+
+
+
+<!-- =====================================================
+     STRUCTURED DATA
+===================================================== -->
+
+<script type="application/ld+json">
+
+{
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "name":"Symbols & Nickname Generator",
+    "description":"Special symbols, Unicode characters and stylish nickname generator.",
+    "url":"https://example.com/"
+}
+
+</script>
+
+
+</body>
+</html>
